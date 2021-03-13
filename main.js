@@ -17,19 +17,19 @@ class CountdownTimer {
         );
         const days = Math.floor(time / (1000 * 60 * 60 * 24));
   
-        document.querySelector('span[data-value="secs"]').textContent = ${secs};
-        document.querySelector('span[data-value="mins"]').textContent = ${mins};
+        document.querySelector('span[data-value="secs"]').textContent = `${secs}`;
+        document.querySelector('span[data-value="mins"]').textContent = `${mins}`;
         document.querySelector(
           'span[data-value="hours"]'
-        ).textContent = ${hours};
-        document.querySelector('span[data-value="days"]').textContent = ${days};
+        ).textContent = `${hours}`;
+        document.querySelector('span[data-value="days"]').textContent = `${days}`;
       }, 1000);
     }
   }
   
   const timer = new CountdownTimer({
     selector: "#timer-1",
-    targetDate: new Date("June 03, 2020")
+    targetDate: new Date("Jul 17, 2021")
   });
   
   timer.updateTimer();
